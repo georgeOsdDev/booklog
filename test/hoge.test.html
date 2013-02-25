@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>browser test</title>
+<link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+<script src="../node_modules/mocha/mocha.js"></script>
+<script src="http://chaijs.com/chai.js" type="text/javascript"></script>
+<script>
+mocha.setup('bdd');
+window.onload = function() { mocha.run() };
+</script>
+<script src="hoge.test.js"></script>
+</head>
+<body>
+<div id="mocha"></div>
+</body>
+</html>

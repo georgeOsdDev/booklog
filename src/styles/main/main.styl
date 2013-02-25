@@ -1,0 +1,142 @@
+@import 'nib'
+@import 'mixin.styl'
+@import 'btn.styl'
+
+body
+  font-family "Lucida Grande", Helvetica, Arial, sans-serif,"Meiryo UI"
+  letter-spacing 0.02em
+  color black
+  background url('../img/main-bg.jpg') repeat
+
+.header
+  background #faf7f7
+  margin 0
+  padding 2px 0
+  text-align center
+
+.header h1
+  margin 2px
+  font-family: 'Damion', cursive;
+  color #D14
+
+.navbar
+  position absolute
+  top 52px
+  background #faf7f7
+  width 100%
+  margin-left 0px
+  margin-right 0px
+  padding 10px 0
+  text-align center
+  color #555
+  zuruiBoarder()
+  zuruiBoxShadow()
+  z-index 1000
+
+.follow_scroll
+  position fixed
+  top 0
+
+#main
+  width 90%
+  max-width 1100px
+  min-width 800px
+  margin 40px auto
+  padding-top 10px
+
+.item
+  width: 180px
+  text-align center
+  background-color white
+  border 1px solid #DEDEDE
+  border-radius 2px
+  cursor pointer
+  box-shadow 1px 1px 2px rgba(0, 0, 0, 0.4)
+  opacity 1
+  margin 0 0 15px
+  padding 15px
+  padding-bottom 5px
+  // background url('../img/item-bg.jpg') repeat-x
+
+.item .thumbnail
+  display block
+  width 180px
+  padding 10px 0 10px
+  height auto
+  text-align center
+  margin 0 auto
+
+.thumbnail img
+  box-shadow 2px 2px 4px rgba(0, 0, 0, 0.4)
+  margin 0 auto
+
+.item .rating
+  margin-left 60px
+  width 65px
+  height 13px
+  display block
+  background url('../img/star-rating-sprite.png') 0 0 no-repeat
+  background-position-y -13px
+
+.item .star_1
+  background-position-x -52px
+.item .star_2
+  background-position-x -39px
+.item .star_3
+  background-position-x -26px
+.item .star_4
+  background-position-x -13px
+.item .star_5
+  background-position-x 0
+
+.item p
+  font-size 10px
+
+#shelf:hover .item:not(:hover)
+    opacity: 0.4
+
+li
+  margin-left 20px
+
+.footer
+  zuruiBoarderTop()
+  padding 10px 0
+
+.footer p
+  margin 10px 20px 0 20px
+
+// utils
+.center
+  text-align center
+
+.pull-right
+  float right
+
+.hide
+  hide()
+
+.disp
+  disp()
+
+.berak
+  break-word()
+
+.clear
+  clear()
+
+hr.soften
+  margin 5px 0 5px 0
+  hrsoften()
+
+@media (min-device-width: 641px)
+  #shelf
+    column-count 5
+    column-gap 5px
+    column-fill auto
+  .item
+    display inline-block
+    column-break-inside avoid
+
+@media (max-device-width: 640px)
+  .item
+    margin-left 55px

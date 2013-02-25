@@ -1,0 +1,11 @@
+{
+  "name": "Booklog",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": null,
+    "underscore-amd": null,
+    "backbone-amd":null,
+    "requirejs": null,
+    "normalize-css": null
+  }
+}

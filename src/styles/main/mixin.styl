@@ -1,0 +1,53 @@
+zuruiLine(alpha1 = 0.1, alpha2 = 1.0)
+  border-bottom 1px solid rgba(0,0,0,alpha1)
+  box-shadow rgba(255,255,255,alpha2) 0 1px 0px
+
+zuruiBoarderTop()
+  border-top 1px solid rgba(0,0,0,.1)
+  box-shadow rgba(255,255,255,1) 0 1px 0px inset
+zuruiBoarderRight()
+  border-right 1px solid rgba(0,0,0,.1)
+  box-shadow rgba(255,255,255,1) 0 1px 0px inset
+zuruiBoarderLeft()
+  border-left 1px solid rgba(0,0,0,.1)
+  box-shadow rgba(255,255,255,1) 0 1px 0px
+zuruiBoarderBottom()
+  border-bottom 1px solid rgba(0,0,0,.1)
+  box-shadow rgba(255,255,255,1) 0 1px 0px
+
+zuruiBoarder()
+  zuruiBoarderTop()
+  zuruiBoarderRight()
+  zuruiBoarderLeft()
+  zuruiBoarderBottom()
+
+zuruiBoxShadow()
+  box-shadow rgba(255,255,255,.5) -1px 1px 0,rgba(255,255,255,1) -1px 1px 0 inset
+
+zuruiTextShadowDark(op = .4)
+  text-shadow 1px -1px rgba(0,0,0,op)
+
+zuruiTextShadowLight(op = .7)
+  text-shadow -1px 1px rgba(255,255,255,op)
+
+zuruiGradientTopDark(op = #333, val = 10%)
+  background op
+  background linear-gradient(darken(op,val), op, vertical)
+  backgorund-image linear-gradient(darken(op,val) 0%, op 100%)
+
+break-word()
+  word-wrap break-word
+
+clear()
+  clear both
+
+hide()
+  display none
+
+disp()
+  display display
+
+hrsoften()
+  height 1px
+  background-image linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0))
+  border 0
