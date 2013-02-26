@@ -62,3 +62,8 @@ require requirement,(_,jquery,lazy,Backbone,config,JSONP,Shelf) ->
         $(".#{target}").addClass("item show").removeClass("hide")
         status[target] = "show"
         $(@).addClass("press")
+
+    $(window).bind "load", ->
+      load = ->
+        $("img.lazy").trigger "sporty"
+      timeout = setTimeout load, 5000
