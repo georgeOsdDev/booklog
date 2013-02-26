@@ -44,6 +44,12 @@ require requirement,(_,jquery,lazy,Backbone,config,JSONP,Shelf) ->
       else if navbar_top >= scroll
         $("#navbar").removeClass "follow_scroll"
 
+      if navigator.userAgent.match(/(iPhone|iPod|iPad|Mobile|Android)/g)
+        $("img.lazy").each ->
+          self = @
+          if $(self).offset().top <= scroll
+            $(self).trigger "appear"
+
     status =
       rank_5:"show"
       rank_4:"show"
