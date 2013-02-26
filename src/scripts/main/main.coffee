@@ -3,13 +3,14 @@ global = @
 requirement = [
   "underscore",
   "jquery",
+  "jquery.lazyload",
   "backbone",
   "config",
-  "util/jsonp"
-  "views/shelf"
+  "util/jsonp.min"
+  "views/shelf.min"
 ]
 
-require requirement,(_,jquery,Backbone,config,JSONP,Shelf) ->
+require requirement,(_,jquery,lazy,Backbone,config,JSONP,Shelf) ->
   class App
     constructor: ->
       @name = "Booklog"

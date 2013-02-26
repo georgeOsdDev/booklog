@@ -1,5 +1,5 @@
 "use strict"
-define ["underscore","backbone","config","util/jsonp","models/book"],(_,Backbone,config,JSONP,Book) ->
+define ["underscore","backbone","config","util/jsonp","models/book.min"],(_,Backbone,config,JSONP,Book) ->
   Books = Backbone.Collection.extend
     model:Book
 
