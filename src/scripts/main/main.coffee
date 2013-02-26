@@ -34,7 +34,6 @@ require requirement,(_,jquery,lazy,Backbone,config,JSONP,Shelf) ->
 
   $ ->
 
-    if navigator.userAgent.match(/(iPhone|iPod|iPad|Mobile|Android)/g) then $("img.lazy").lazyload()
     navbar_top = $("#navbar").offset().top
     scroll = 0
 
@@ -62,8 +61,3 @@ require requirement,(_,jquery,lazy,Backbone,config,JSONP,Shelf) ->
         $(".#{target}").addClass("item show").removeClass("hide")
         status[target] = "show"
         $(@).addClass("press")
-
-    $(window).bind "load", ->
-      load = ->
-        $("img.lazy").trigger "sporty"
-      timeout = setTimeout load, 5000
