@@ -58,6 +58,27 @@ module.exports = (grunt) ->
         dest: 'public/js/util',
         ext: '.js'
 
+      models:
+        expand: true,
+        cwd: 'src/scripts/models',
+        src: ['*.coffee'],
+        dest: 'public/js/models',
+        ext: '.js'
+
+      collections:
+        expand: true,
+        cwd: 'src/scripts/collections',
+        src: ['*.coffee'],
+        dest: 'public/js/collections',
+        ext: '.js'
+
+      views:
+        expand: true,
+        cwd: 'src/scripts/views',
+        src: ['*.coffee'],
+        dest: 'public/js/views',
+        ext: '.js'
+
     uglify:
       main:
         options:
@@ -69,6 +90,15 @@ module.exports = (grunt) ->
         files:
           'public/js/config/config.min.js': ['public/js/config/config.js']
           'public/js/util/jsonp.min.js': ['public/js/util/jsonp.js']
+      models:
+        files:
+          'public/js/models/book.min.js': ['public/js/models/book.js']
+      collections:
+        files:
+          'public/js/collections/books.min.js': ['public/js/collections/books.js']
+      views:
+        files:
+          'public/js/views/shelf.min.js': ['public/js/views/shelf.js']
 
     stylus:
       compile:
