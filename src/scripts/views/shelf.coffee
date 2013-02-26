@@ -45,4 +45,4 @@ define ["underscore","backbone","config","collections/books"],(_,Backbone,config
       @render()
       #TODO Lazy image loading.
       $(@el).children('.item').removeClass('hide')
-      if navigator.userAgent.match(/(iPhone|iPod|iPad|Mobile|Android)/g) then $("img.lazy").lazyload()
+      $("img.lazy").lazyload {event : "scroll"}
