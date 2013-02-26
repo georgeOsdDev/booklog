@@ -26,6 +26,8 @@ define(["underscore", "backbone", "config", "collections/books.min"], function(_
     },
     display: function() {
       this.render();
+      $("#loading").addClass('hide');
+      $("#toggle_btn").removeClass('hide');
       $(this.el).children('.item').removeClass('hide');
       return $("img.lazy").lazyload({
         event: "scroll"

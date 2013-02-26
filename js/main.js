@@ -86,9 +86,9 @@ require(requirement, function(_, jquery, lazy, Backbone, config, JSONP, Shelf) {
         status[target] = "hide";
         return $(this).removeClass("press");
       } else {
+        $(this).addClass("press");
         $("." + target).addClass("item show").removeClass("hide");
-        status[target] = "show";
-        return $(this).addClass("press");
+        return status[target] = "show";
       }
     });
   });
