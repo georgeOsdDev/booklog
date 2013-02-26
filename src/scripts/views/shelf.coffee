@@ -43,6 +43,7 @@ define ["underscore","backbone","config","collections/books.min"],(_,Backbone,co
 
     display: ->
       @render()
-      #TODO Lazy image loading.
+      $("#loading").addClass('hide')
+      $("#toggle_btn").removeClass('hide')
       $(@el).children('.item').removeClass('hide')
       $("img.lazy").lazyload {event : "scroll"}
