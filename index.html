@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Booklog</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.normalized.min.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Booklog</h1>
+    <a id="githubribbon" href="https://github.com/georgeosddev/booklog" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;z-index: 1040" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+  </header>
+  <div id="navbar" class="navbar">
+    <span id="toggle_btn">
+      <button class="btn press" data-target="rank_1">★1</button>
+      <button class="btn press" data-target="rank_2">★2</button>
+      <button class="btn press" data-target="rank_3">★3</button>
+      <button class="btn press" data-target="rank_4">★4</button>
+      <button class="btn press" data-target="rank_5">★5</button>
+    </span>
+  </div>
+  <div id="main" class="main">
+    <div id="shelf"></div>
+  </div>
+  <footer class="footer">
+    <p><small>
+      Powerd by unofficial <a href="http://booklog.co.jp" target="_blank">booklog</a> API<br>
+      Source code can be found on <a href="https://github.com/georgeOsdDev" target="_blank">github</a>, licenced under <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.<br>
+    &copy; 2013- <a href="http://about.me/takeharu.oshida" trget="_blank">Takeharu.Oshida</a>
+  </small></p>
+  </footer>
+
+  <script src="vendor/requirejs/require.js" data-main="js/main.min.js"></script>
+  <!--script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script-->
+</body>
+</html>
