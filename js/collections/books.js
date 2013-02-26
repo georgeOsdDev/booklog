@@ -1,5 +1,5 @@
 "use strict";
-define(["underscore", "backbone", "config", "util/jsonp", "models/book"], function(_, Backbone, config, JSONP, Book) {
+define(["underscore", "backbone", "config", "util/jsonp", "models/book.min"], function(_, Backbone, config, JSONP, Book) {
   var Books;
   return Books = Backbone.Collection.extend({
     model: Book,

@@ -19,7 +19,7 @@ var global, requirement;
 
 global = this;
 
-requirement = ["underscore", "jquery", "jquery.lazyload", "backbone", "config", "util/jsonp", "views/shelf"];
+requirement = ["underscore", "jquery", "jquery.lazyload", "backbone", "config", "util/jsonp.min", "views/shelf.min"];
 
 require(requirement, function(_, jquery, lazy, Backbone, config, JSONP, Shelf) {
   var App, app;
@@ -61,9 +61,6 @@ require(requirement, function(_, jquery, lazy, Backbone, config, JSONP, Shelf) {
   app.shelf = new Shelf();
   return $(function() {
     var navbar_top, scroll, status;
-    if (navigator.userAgent.match(/(iPhone|iPod|iPad|Mobile|Android)/g)) {
-      $("img.lazy").lazyload();
-    }
     navbar_top = $("#navbar").offset().top;
     scroll = 0;
     $(document).scroll(function() {

@@ -1,5 +1,5 @@
 "use strict";
-define(["underscore", "backbone", "config", "collections/books"], function(_, Backbone, config, Books) {
+define(["underscore", "backbone", "config", "collections/books.min"], function(_, Backbone, config, Books) {
   var Shelf;
   return Shelf = Backbone.View.extend({
     el: $("#shelf"),
@@ -26,7 +26,10 @@ define(["underscore", "backbone", "config", "collections/books"], function(_, Ba
     },
     display: function() {
       this.render();
-      return $(this.el).children('.item').removeClass('hide');
+      $(this.el).children('.item').removeClass('hide');
+      return $("img.lazy").lazyload({
+        event: "scroll"
+      });
     }
   });
 });
