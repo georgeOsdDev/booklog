@@ -41,3 +41,21 @@ require requirement,(_,jquery,Backbone,config,JSONP,Shelf) ->
         $("#navbar").addClass "follow_scroll"
       else if navbar_top >= scroll
         $("#navbar").removeClass "follow_scroll"
+
+    status =
+      rank_5:"show"
+      rank_4:"show"
+      rank_3:"show"
+      rank_2:"show"
+      rank_1:"show"
+
+    $("#toggle_btn").children().on "click", ->
+      target = $(@).data("target")
+      if status[target] is "show"
+        $(".#{target}").addClass("hide").removeClass("item show")
+        status[target] = "hide"
+        $(@).removeClass("press")
+      else
+        $(".#{target}").addClass("item show").removeClass("hide")
+        status[target] = "show"
+        $(@).addClass("press")

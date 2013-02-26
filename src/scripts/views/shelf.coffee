@@ -26,7 +26,10 @@ define ["underscore","backbone","config","collections/books"],(_,Backbone,config
                   </a></div>
                   <p class="author"><%= book.get('author') %></p>
                   <p class="title"><%= book.get('title').replace(/[^ -~｡-ﾟ]/g,"  ").length > 80 ? book.get('title').substr(0,40) + "..." : book.get('title') %></p>
-                  <p class="buttons"><button class='btn booklog'>booklog</button><button class='btn amazon'>amazon</button></p>
+                  <p class="buttons">
+                    <a href='http://booklog.jp/users/georgeosd/archives/1/<%= book.get('asin') %>' target='_blank'><button class='btn booklog'>Booklog</button></a>
+                    <a href='http://www.amazon.co.jp/gp/product/<%= book.get('asin') %>/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=<%= book.get('asin') %>&linkCode=as2&tag=<%= config.amazonuser %>-22' target='_blank'><button class='btn amazon'>Amazon</button></a>
+                  </p>
                 </div>
                 <% }); %>"""
 
