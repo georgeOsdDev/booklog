@@ -22,7 +22,13 @@ define ["underscore","backbone","config","collections/books"],(_,Backbone,config
                 <div class='hide item rank_<%= book.get("rank") %>'>
                   <p><span class="rating star_<%= book.get("rank") %>"></span></p>
                   <div class="thumbnail"><a href='http://www.amazon.co.jp/gp/product/<%= book.get('asin') %>/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=<%= book.get('asin') %>&linkCode=as2&tag=<%= config.amazonuser %>-22' target='_blank'>
-                    <img src='<%= book.get('image').replace('SL75','SL180') || 'noimage.png'%>' alt='<%= book.get('title') %>'>
+                    <img class='lazy' src='
+                      <% if (navigator.userAgent.match(/(iPhone|iPod|iPad|Mobile|Android)/g)){ %>
+                        <%='img/loading.gif' %>
+                      <% }else{ %>
+                        <%= book.get('image').replace('SL75','SL180') || 'img/noimage.gif' %>
+                      <% } %>
+                      ' data-original='<%= book.get('image').replace('SL75','SL180') || 'img/noimage.gif'%>' alt='<%= book.get('title') %>'>
                   </a></div>
                   <p class="author"><%= book.get('author') %></p>
                   <p class="title"><%= book.get('title').replace(/[^ -~｡-ﾟ]/g,"  ").length > 80 ? book.get('title').substr(0,40) + "..." : book.get('title') %></p>

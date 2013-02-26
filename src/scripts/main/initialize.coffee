@@ -7,6 +7,9 @@ require.config
       "http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min",
       "../vendor/jquery/jquery.min"
     ]
+    "jquery.lazyload": [
+      "../vendor/jquery.lazyload/jquery.lazyload.min"
+    ]
     underscore: [
       "../vendor/underscore-amd/underscore-min"
     ]
@@ -16,3 +19,5 @@ require.config
     config: [
       "config/config"
     ]
+  shim:
+    'jquery.lazyload': ['jquery']

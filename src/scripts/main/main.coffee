@@ -3,13 +3,14 @@ global = @
 requirement = [
   "underscore",
   "jquery",
+  "jquery.lazyload",
   "backbone",
   "config",
   "util/jsonp"
   "views/shelf"
 ]
 
-require requirement,(_,jquery,Backbone,config,JSONP,Shelf) ->
+require requirement,(_,jquery,lazy,Backbone,config,JSONP,Shelf) ->
   class App
     constructor: ->
       @name = "Booklog"
@@ -32,6 +33,8 @@ require requirement,(_,jquery,Backbone,config,JSONP,Shelf) ->
   app.shelf = new Shelf()
 
   $ ->
+
+    if navigator.userAgent.match(/(iPhone|iPod|iPad|Mobile|Android)/g) then $("img.lazy").lazyload()
     navbar_top = $("#navbar").offset().top
     scroll = 0
 

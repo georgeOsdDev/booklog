@@ -4,8 +4,9 @@
   "dependencies": {
     "jquery": null,
     "underscore-amd": null,
-    "backbone-amd":null,
+    "backbone-amd": null,
     "requirejs": null,
-    "normalize-css": null
+    "normalize-css": null,
+    "jquery.lazyload": "~1.8.4"
   }
 }
